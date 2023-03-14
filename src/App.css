@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
+}
+.App{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.left{
+  width: 100%;
+  height: 100%;
+}
+.left img{
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+.right{
+  width: 100%;
+  height: 100%;
+}
+.right img{
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+.Header{
+  width: 100%;
+}
+
+.container-header{
+  width: 100%;
+  height: 80px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+}
+.container-header-link{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  color: #fff;
+}
+.container-header-link a{
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10%;
+}
+.img-header{
+  position:absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.title-header{
+  color: #fff;
+  margin-left:10%;
 }
 
-.App-link {
-  color: #61dafb;
+.card-picture{
+  height: 400px;
+  position: relative;
+  margin: 10px;
+}
+.card-picture img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-info{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  font-size: 12px;
+  background-color: #2C3333;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+
+}
+.card-info .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height: 100%;
+
+}
+.card-info a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.show{
+  opacity: 1;
+  animation:  ease-in;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(360deg);
+  transition: opacity 1s, height 0.3s, width 0.3s, transform 1s;
+}
+.close{
+ opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 0%;
+  width: 0%;
+  transform: rotate(0deg);
+  transition: opacity 0.5s, height 0.3s, width 0.3s, transform 1s;
+}
+.container-section{
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+.container-cards{
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  height: 100%;
+}
+.container-nasa{
+  height: auto;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.container-title-nasa{
+  font-weight: bold;
+}
+.container-img{
+  width: 100%;
+}
+.hdimg{
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+.description-nasa{}
+.copyright{
+
+}
+
+@media screen and (max-width:600px){
+  .container-cards{
+    grid-template-columns: repeat(2,1fr);
   }
-  to {
-    transform: rotate(360deg);
+  
+}
+
+
+@media screen and (min-width:768px) and (max-width:992px){
+  .container-cards{
+    grid-template-columns: repeat(3,1fr);
   }
+  
 }

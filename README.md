@@ -1,3 +1,5 @@
+# This project need api key nasa and marvel (https://api.nasa.gov/, https://developer.marvel.com/)
+    Please to use this app card you need a api key, this a app is only test with react.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

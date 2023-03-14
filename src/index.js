@@ -2,12 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import  Marvel from './pages/Marvel';
+import Nasa from './pages/Nasa'
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const rutas = createBrowserRouter([{
+  path: '/',
+  element: <App />
+},{
+  path: '/marvel',
+  element: <Marvel />
+},{
+  path: '/nasa',
+  element: <Nasa />
+}]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+        <RouterProvider router={rutas} />
   </React.StrictMode>
 );
 
